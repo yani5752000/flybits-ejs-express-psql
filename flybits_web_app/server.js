@@ -11,6 +11,15 @@ app.set("view engine", "ejs");
 
 app.use(express.static(__dirname + '/public'));
 
+const { Pool } = require('pg');
+
+const pool = new Pool({
+  user: 'vagrant',
+  password: '123',
+  host: 'localhost',
+  database: 'lightbnb'
+});
+
 
 
 
