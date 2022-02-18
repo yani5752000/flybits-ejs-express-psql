@@ -1,0 +1,56 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <style>
+      #user-map {
+        width: 50%;
+        height: 400px;
+        background-color: grey;
+      }
+    </style>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlwJqBCLHwnbeUMfP2zzr9k7RRQJVaigQ&callback=initUserMap">
+    </script>
+     <!-- <script>
+          function initMap() {
+              var dumbo = {lat: 40.700802, lng:73.987602};
+              var mapOptions = {
+                  center: dumbo,
+                  zoom: 10
+              };
+              var googlemap = new google.maps.Map(document.getElementById("map"), mapOptions);
+          }
+      </script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/scripts/client.js"></script>
+    <link href="/css/user.css" rel="stylesheet" type="text/css">
+    <title>User Page</title>
+  </head>
+
+  <body>
+    <output id="latitude">hiii</output>
+    <br>
+    <output id="longitude">hooooo</output>
+
+    <div id="user-map"></div>
+
+    <main>
+      <!-- <% if(promotion){%>
+        <label>Hi <%= promotion.caption %></label>
+      <% } %> -->
+      <section id="userPromotions" ></section>
+      <div class="user-div">This is for user.</div>
+      <section class="promotions"></section>
+      
+    </main>
+      
+  </body>
+</html>

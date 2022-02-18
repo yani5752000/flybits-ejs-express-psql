@@ -1,0 +1,72 @@
+<style>
+  #marketer-map {
+    width: 100%;
+    height: 400px;
+    background-color: grey;
+  }
+</style>
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDA-Qulye8g8i7y0ndzBRcQD_9quuD2c3E&callback=initMarketerMap">
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="/scripts/client.js"></script>
+<link href="/css/marketer.css" rel="stylesheet" type="text/css">
+
+<output id="latitude1">hiii</output>
+<br>
+<output id="longitude1">hooooo</output>
+
+<div id="marketer-map"></div>
+
+<form action="/addBranch" method="POST">
+  <label>Add New Branch</label>
+  <input type="text" name="latitude" placeholder="Enter latitude">
+  <input type="text" name="longitude" placeholder="Enter longitude">
+  <button type="submit">Submit</button>
+</form>
+
+<form action="/addPromotion" method="POST">
+  <label>Add New Promotion</label>
+  <input type="text" name="branchId" placeholder="Enter branch id">
+  <input type="text" name="imageUrl" placeholder="Enter branch image url">
+  <input type="text" name="caption" placeholder="Enter the caption">
+  <button type="submit">Submit</button>
+</form>
+
+<form action="" method="">
+  <label>Delete Promotion</label>
+  <input type="text" name="promotionId" placeholder="Enter promotion Id">
+  <button type="submit">Submit</button>
+</form>
+
+<!-- <% for(const id in branchDatabase) {%>
+  <div class="marketer-div">
+    <p>Bank Branch id: <%= id %></p> 
+    <br>
+    <p>Bank Branch Latitude: <%= branchDatabase[id]["latitude"] %></p> 
+    <br>
+    <p>Bank Branch Longitude: <%= branchDatabase[id]["longitude"] %></p>
+  </div>
+  <% } %> -->
+
+  <section id="branches"></section>
+
+  <!-- <% for(const id in promotionDatabase) {%>
+    <div class="marketer-div">
+      <p>Promotion id: <%= id %></p> 
+      <br>
+      <p>Bank Branch id: <%= promotionDatabase[id]["branchId"] %></p> 
+      <br>
+      <p>Image: </p><img src="<%=promotionDatabase[id].imageUrl%>" alt="">
+      <br>
+      <p>Caption: <%= promotionDatabase[id]["caption"] %></p>
+    </div>
+    <% } %> -->
+
+  <section id="marketerPromotions"></section>
+<div class="marketer-div">This is for marketer.</div>
+<!-- id: 1, 
+      branchId: 2, 
+      imageUrl: "https://www.shutterstock.com/image-illustration/3d-illustration-cartoon-characters-businessmen-hands-2022445304",
+      caption: -->
