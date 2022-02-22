@@ -45,8 +45,9 @@ app.post("/addBranch", (req, res) => {
   console.log("%%%", req.body)
   const latitude = req.body.latitude;
   const longitude = req.body.longitude;
-  const id = Object.keys(branchDatabase).length + 1;
-  branchDatabase[id] = {id, latitude, longitude};
+  pool.query("INSERT INTO branches (latitude, longitude) VLUES $1, $2", [latitude, longitude])
+  // const id = Object.keys(branchDatabase).length + 1;
+  // branchDatabase[id] = {id, latitude, longitude};
   console.log(branchDatabase);
   // const templateVars = {branchDatabase: branchDatabase}
   // res.render("marketerPage", templateVars);
