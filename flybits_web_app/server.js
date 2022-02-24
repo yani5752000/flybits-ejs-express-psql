@@ -87,6 +87,18 @@ app.post("/deletePromotion", (req, res) => {
   res.redirect("/marketer");
 })
 
+app.post("/deleteBranch", (req, res) => {
+  console.log("%%%", req.body)
+  const branchId = req.body.branchId;
+  const imageUrl = req.body.imageUrl;
+  const caption = req.body.caption;
+  pool.query("INSERT INTO promotions(branch_id, caption, photo_url) VALUES ($1, $2, $3)"
+  , [branchId, caption, imageUrl]);
+  // const templateVars = {branchDatabase: branchDatabase}
+  // res.render("marketerPage", templateVars);
+  res.redirect("/marketer");
+})
+
 app.post("/addPromotion", (req, res) => {
   console.log("%%%", req.body)
   const branchId = req.body.branchId;
