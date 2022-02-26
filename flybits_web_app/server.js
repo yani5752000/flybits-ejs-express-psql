@@ -55,7 +55,9 @@ app.post("/addBranch", (req, res) => {
 })
 
 app.get("/branches", (req, res) => {
-  res.json(branchDatabase);
+  pool.query("SELECT * FROM promotions RETURNING *")
+  .then()
+  // res.json(branchDatabase);
 })
 
 app.get("/promotions", (req, res) => {
