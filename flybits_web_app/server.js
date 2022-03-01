@@ -64,7 +64,9 @@ app.get("/branches", (req, res) => {
 
 app.get("/promotions", (req, res) => {
   pool.query("SELECT * FROM promotions RETURNING *")
-  .then()
+  .then(result => {
+    return result.rows;
+  })
   // res.json(promotionDatabase);
 })
 
