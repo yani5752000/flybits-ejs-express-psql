@@ -62,6 +62,14 @@ app.get("/branches", (req, res) => {
   // res.json(branchDatabase);
 })
 
+app.get("/promotions/:lat/:lng", (req, res) => {
+  pool.query("SELECT * FROM promotions Where RETURNING *")
+  .then(result => {
+    return result.rows;
+  })
+  // res.json(promotionDatabase);
+})
+
 app.get("/promotions", (req, res) => {
   pool.query("SELECT * FROM promotions RETURNING *")
   .then(result => {
