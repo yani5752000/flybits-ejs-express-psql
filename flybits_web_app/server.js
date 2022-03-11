@@ -63,7 +63,8 @@ app.get("/branches", (req, res) => {
 })
 
 app.get("/promotions/:lat/:lng", (req, res) => {
-  pool.query("SELECT * FROM promotions Where latitude = $1 AND longitude = $2 RETURNING *")
+  pool.query("SELECT * FROM promotions Where latitude = $1 AND longitude = $2"
+  , [req.params.lat, req.params.lng])
   .then(result => {
     return result.rows[0];
   })
