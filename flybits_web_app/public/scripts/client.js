@@ -3,7 +3,7 @@ function diff(a, b) {
 }
 
 const renderBranches = (branches) => {
-  for(let id in branches) {
+  for(let id of branches) {
     $branch = createBranchElement(branches[id]);
     $("#branches").append($branch);
   }
