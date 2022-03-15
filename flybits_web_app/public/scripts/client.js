@@ -10,7 +10,7 @@ const renderBranches = (branches) => {
 };
 
 const renderMarketerPromotions = (Promotions) => {
-  for(let id in Promotions) {
+  for(let id of Promotions) {
     $promotion = createMarketerPromotionElement(Promotions[id]);
     $("#marketerPromotions").append($promotion);
   }
