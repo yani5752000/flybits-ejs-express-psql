@@ -119,11 +119,15 @@ app.post("/addPromotion", (req, res) => {
   const branchId = req.body.branchId;
   const imageUrl = req.body.imageUrl;
   const caption = req.body.caption;
-  pool.query("INSERT INTO promotions(branch_id, caption, photo_url) VALUES ($1, $2, $3)"
-  , [branchId, caption, imageUrl]);
+  pool.query("INSERT INTO promotions(branch_id, caption, photo_url) VALUES ($1, $2, $3) RETURNING *;"
+  , [branchId, caption, imageUrl])
+  .then(result => {
+    console.log(result.rows);
+    res.redirect("/marketer");
+  })
   // const templateVars = {branchDatabase: branchDatabase}
   // res.render("marketerPage", templateVars);
-  res.redirect("/marketer");
+  
 })
 
 app.post("/marketerPromotion/:promotionId/delete", (req, res) => {
