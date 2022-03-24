@@ -96,7 +96,10 @@ app.post("/deletePromotion", (req, res) => {
   const imageUrl = req.body.imageUrl;
   const caption = req.body.caption;
   pool.query("INSERT INTO promotions(branch_id, caption, photo_url) VALUES ($1, $2, $3) Returning *;"
-  , [branchId, caption, imageUrl]);
+  , [branchId, caption, imageUrl])
+  .then(result => {
+    
+  })
   // const templateVars = {branchDatabase: branchDatabase}
   // res.render("marketerPage", templateVars);
   res.redirect("/marketer");
