@@ -98,7 +98,7 @@ app.post("/deletePromotion", (req, res) => {
   pool.query("INSERT INTO promotions(branch_id, caption, photo_url) VALUES ($1, $2, $3) Returning *;"
   , [branchId, caption, imageUrl])
   .then(result => {
-    
+    res.redirect("/promotions")
   })
   // const templateVars = {branchDatabase: branchDatabase}
   // res.render("marketerPage", templateVars);
