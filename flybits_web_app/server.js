@@ -86,7 +86,7 @@ app.post("/branches", (req, res) => {
   pool.query("INSERT INTO promotions(branch_id, caption, photo_url) VALUES ($1, $2, $3) Returning *;"
   , [branchId, caption, imageUrl])
   .then(result => {
-    res.redirect("/promotions")
+    res.redirect("/marketer")
   })
   
   // const templateVars = {branchDatabase: branchDatabase}
@@ -115,10 +115,12 @@ app.post("/deleteBranch", (req, res) => {
   const imageUrl = req.body.imageUrl;
   const caption = req.body.caption;
   pool.query("INSERT INTO promotions(branch_id, caption, photo_url) VALUES ($1, $2, $3)"
-  , [branchId, caption, imageUrl]);
+  , [branchId, caption, imageUrl])
+  .then(result => {
+    res.redirect("/marketer");
+  })
   // const templateVars = {branchDatabase: branchDatabase}
   // res.render("marketerPage", templateVars);
-  res.redirect("/marketer");
 })
 
 app.post("/addPromotion", (req, res) => {
