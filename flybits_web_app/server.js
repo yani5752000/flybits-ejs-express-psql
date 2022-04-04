@@ -103,9 +103,7 @@ app.post("/deletePromotion", (req, res) => {
   .then(result => {
     res.redirect("/marketer")
   })
-  // const templateVars = {branchDatabase: branchDatabase}
-  // res.render("marketerPage", templateVars);
-  res.redirect("/marketer");
+  
 })
 
 app.post("/deleteBranch", (req, res) => {
