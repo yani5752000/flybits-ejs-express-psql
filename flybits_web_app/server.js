@@ -89,9 +89,7 @@ app.post("/branches", (req, res) => {
     res.redirect("/marketer")
   })
   
-  // const templateVars = {branchDatabase: branchDatabase}
-  // res.render("marketerPage", templateVars);
-  res.redirect("/marketer");
+ 
 })
 
 app.post("/deletePromotion", (req, res) => {
