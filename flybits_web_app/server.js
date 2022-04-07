@@ -74,7 +74,7 @@ app.get("/promotions", (req, res) => {
   .then(result => {
     return result.rows;
   })
-  // res.json(promotionDatabase);
+  
 })
 
 app.post("/branches", (req, res) => {
