@@ -66,7 +66,6 @@ app.get("/promotions/:lat/:lng", (req, res) => {
   .then(result => {
     return result.rows[0];
   })
-  // res.json(promotionDatabase);
 })
 
 app.get("/promotions", (req, res) => {
