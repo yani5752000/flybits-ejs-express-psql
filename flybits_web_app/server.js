@@ -127,8 +127,7 @@ app.post("/addPromotion", (req, res) => {
     console.log(result.rows);
     res.redirect("/marketer");
   })
-  // const templateVars = {branchDatabase: branchDatabase}
-  // res.render("marketerPage", templateVars);
+ 
   
 })
 
