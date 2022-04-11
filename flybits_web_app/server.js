@@ -110,7 +110,8 @@ app.post("/deleteBranch", (req, res) => {
   pool.query("DELETE FROM branches WHERE id = $1"
   , [branchId])
   .then(result => {
-    res.redirect("/marketer");
+    const templateVars = {branches: res.rows}
+    res.redirect("/marketer", templateVars);
   })
   // const templateVars = {branchDatabase: branchDatabase}
   // res.render("marketerPage", templateVars);
