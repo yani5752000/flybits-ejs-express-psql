@@ -113,8 +113,6 @@ app.post("/deleteBranch", (req, res) => {
     const templateVars = {branches: res.rows}
     res.redirect("/marketer", templateVars);
   })
-  // const templateVars = {branchDatabase: branchDatabase}
-  // res.render("marketerPage", templateVars);
 })
 
 app.post("/addPromotion", (req, res) => {
