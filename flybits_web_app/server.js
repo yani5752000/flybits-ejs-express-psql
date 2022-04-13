@@ -147,16 +147,6 @@ app.post("/userCheckPromotion", (req, res) => {
   
   const refLat = 45.37464841017669;
   const refLng = -75.651369761328;
-
-  // if(diff(refLat, latitude) <= 0.0001 
-  // && diff(refLng, longitude) <= 0.0001) {
-  //   // console.log("this is the promotion");
-  //   const promotion = promotionDatabase["1"];
-  // } else {
-  //   const promotion = null;
-  // }
-  // const templateVars = {promotion};
-  // res.render("userPage.ejs", templateVars);
 })
 
 app.listen(PORT, () => {
