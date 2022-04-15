@@ -57,7 +57,6 @@ app.get("/branches", (req, res) => {
   .then(result => {
     return result.rows;
   })
-  // res.json(branchDatabase);
 })
 
 app.get("/promotions/:lat/:lng", (req, res) => {
