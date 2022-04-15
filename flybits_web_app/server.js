@@ -53,7 +53,7 @@ app.post("/addBranch", (req, res) => {
 })
 
 app.get("/branches", (req, res) => {
-  pool.query("SELECT * FROM promotions RETURNING *")
+  pool.query("SELECT * FROM promotions;")
   .then(result => {
     return result.rows;
   })
