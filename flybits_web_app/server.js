@@ -103,7 +103,7 @@ app.post("/deletePromotion", (req, res) => {
 })
 
 app.post("/deleteBranch", (req, res) => {
-  console.log("%%%", req.body)
+  
   const branchId = req.body.branchId;
   
   pool.query("DELETE FROM branches WHERE id = $1"
