@@ -76,7 +76,7 @@ app.get("/promotions", (req, res) => {
 })
 
 app.post("/branches", (req, res) => {
-  console.log("%%%", req.body)
+  
   const branchId = req.body.branchId;
   const imageUrl = req.body.imageUrl;
   const caption = req.body.caption;
