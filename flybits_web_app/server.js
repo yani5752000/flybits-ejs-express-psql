@@ -122,7 +122,6 @@ app.post("/addPromotion", (req, res) => {
   pool.query("INSERT INTO promotions(branch_id, caption, photo_url) VALUES ($1, $2, $3) RETURNING *;"
   , [branchId, caption, imageUrl])
   .then(result => {
-    console.log(result.rows);
     res.redirect("/marketer");
   })
  
