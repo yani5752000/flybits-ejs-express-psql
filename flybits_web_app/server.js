@@ -132,8 +132,6 @@ app.post("/marketerPromotion/:promotionId/delete", (req, res) => {
   delete promotionDatabase[req.params.promotionId];
  
   console.log(promotionDatabase);
-  // const templateVars = {branchDatabase: branchDatabase}
-  // res.render("marketerPage", templateVars);
   res.redirect("/marketer");
 })
 
