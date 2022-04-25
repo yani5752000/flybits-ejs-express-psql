@@ -137,7 +137,7 @@ app.post("/marketerPromotion/:promotionId/delete", (req, res) => {
 
 
 app.post("/userCheckPromotion", (req, res) => {
-  // console.log("%%%", req.body)
+  
   const latitude = req.body.latitude;
   const longitude = req.body.longitude;
   
