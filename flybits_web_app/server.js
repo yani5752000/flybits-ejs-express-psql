@@ -42,7 +42,7 @@ app.get("/marketer", (req, res) => {
 });
 
 app.post("/addBranch", (req, res) => {
-  console.log("%%%", req.body)
+  
   const latitude = req.body.latitude;
   const longitude = req.body.longitude;
   pool.query("INSERT INTO branches (latitude, longitude) VALUES $1, $2 RETURNING *", [latitude, longitude])
