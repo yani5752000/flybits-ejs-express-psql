@@ -115,7 +115,7 @@ app.post("/deleteBranch", (req, res) => {
 })
 
 app.post("/addPromotion", (req, res) => {
-  console.log("%%%", req.body)
+  
   const branchId = req.body.branchId;
   const imageUrl = req.body.imageUrl;
   const caption = req.body.caption;
