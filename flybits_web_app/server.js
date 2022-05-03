@@ -37,8 +37,7 @@ app.get("/user", (req, res) => {
 });
 
 app.get("/marketer", (req, res) => {
-  const templateVars = {branchDatabase, promotionDatabase};
-  res.render("marketerPage", templateVars);
+  
   pool.query("SELECT * From branches")
   .then(result1 => {
 
