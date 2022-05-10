@@ -6,3 +6,7 @@ CREATE TABLE branches (
   name VARCHAR(255) NOT NULL
 
 );
+CREATE TABLE promotions (
+  
+
+);
