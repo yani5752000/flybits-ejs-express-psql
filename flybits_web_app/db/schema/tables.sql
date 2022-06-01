@@ -7,6 +7,6 @@ CREATE TABLE branches (
 
 );
 CREATE TABLE promotions (
-  
-
+  id SERIAL PRIMARY KEY NOT NULL,
+  branch_id INT 
 );
