@@ -8,5 +8,5 @@ CREATE TABLE branches (
 );
 CREATE TABLE promotions (
   id SERIAL PRIMARY KEY NOT NULL,
-  branch_id INT 
+  branch_id INTEGER REFERENCES branches(id) ON DELETE CASCADE,
 );
