@@ -1,0 +1,1 @@
+INSERT INTO branches (owner_id, category_id, title, url, description) VALUES

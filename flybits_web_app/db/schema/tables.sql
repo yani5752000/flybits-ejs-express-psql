@@ -9,6 +9,6 @@ CREATE TABLE branchess (
 CREATE TABLE promotions (
   id SERIAL PRIMARY KEY NOT NULL,
   branch_id INTEGER REFERENCES branches(id) ON DELETE CASCADE,
-  capption VARCHAR(255) NOT NULL,
+  caption VARCHAR(255) NOT NULL,
   photo_url VARCHAR(255) NOT NULL
 );
