@@ -1,1 +1,2 @@
-INSERT INTO branches (owner_id, category_id, title, url, description) VALUES
+INSERT INTO branches (lat, lng) VALUES
+(1.2, 3.5);
